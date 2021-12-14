@@ -2,20 +2,30 @@
 // by Chufan Wu
 // Dec. 2021
 
-#ifndef __DATE__
-#define __DATE__
+#ifndef __DATE_H__
+#define __DATE_H__
 
-class Date{
+#define __MIN_YEAR__ 1900
+#define __MAX_YEAR__ 2100
+
+class Date {
 public:
-    Date();
-    Date(int year, int month, int day);
+    Date() : year(0), month(0), day(0) {};
+    Date(int yearPrmt);
+    Date(int yearPrmt, int monthPrmt, int dayPrmt);
     ~Date();
-    int getYear();
-    int getMonth();
-    int getDay();
-    void setYear();
-    void setMonth();
-    void setDay();
+    int getYear() const;
+    int getMonth() const;
+    int getDay() const;
+    void setYear(int yearPrmt);
+    void setMonth(int monthPrmt);
+    void setDay(int dayPrmt);
+    void setDate(int yearPrmt, int monthPrmt, int dayPrmt);
+    bool isLeapYear() const;
+    bool isLeapYear(int yearPrmt) const;
+    bool isDateLegal() const;
+    bool isDateLegal(int yearPrmt) const;
+    bool isDateLegal(int yearPrmt, int monthPrmt, int dayPrmt) const;
 private: 
     int year;
     int month;
