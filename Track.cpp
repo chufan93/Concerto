@@ -5,12 +5,14 @@
 #include <string>
 #include "Track.h"
 
+// Constructor
 Track::Track(std::string &trackNamePrmt, std::string &trackArtistPrmt, double &trackPlaytimePrmt) {
     this -> trackName = trackNamePrmt;
     this -> trackArtist = trackArtistPrmt;
     this -> trackPlaytime = trackPlaytimePrmt;
 }
 
+// Destructor
 Track::~Track() {
     this -> trackName = "";
     this -> trackArtist = "";
