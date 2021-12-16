@@ -10,6 +10,9 @@
 class Movement : Track {
 public:
     Movement() : tempo(""), opus("") {};
+    Movement(std::string &trackNamePrmt, std::string &trackArtistPrmt, double &trackPlaytimePrmt);
+    Movement(std::string &trackNamePrmt, std::string &trackArtistPrmt, double &trackPlaytimePrmt, 
+        std::string &tempo);
     Movement(std::string &trackNamePrmt, std::string &trackArtistPrmt, double &trackPlaytimePrmt, 
         std::string &tempo, std::string &opus);
     ~Movement();
@@ -18,6 +21,9 @@ public:
     void setTempo();
     void setOpus();
 private:
+    int movementIndex;
+    int movementCount;
+    std::string movementName;
     std::string tempo;
     std::string opus;
 };

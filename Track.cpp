@@ -6,10 +6,28 @@
 #include "Track.h"
 
 // Constructor
-Track::Track(std::string &trackNamePrmt, std::string &trackArtistPrmt, double &trackPlaytimePrmt) {
+Track::Track(std::string &trackNamePrmt, double &trackPlaytimePrmt) {
+    this -> trackName = trackNamePrmt;
+    this -> trackPlaytime = trackPlaytimePrmt;
+}
+
+Track::Track(std::string &trackNamePrmt, std::string &trackArtistPrmt, std::string &albumArtistPrmt, 
+        double &trackPlaytimePrmt, int &trackNumberPrmt, int &trackCountPrmt, int &discNumberPrmt, 
+        int &discCountPrmt, int &trackPlayCountPrmt, int &trackEvaluationPrmt, bool &isFavouritePrmt, 
+        std::string &recordingInfoPrmt, std::string &commentPrmt) {
     this -> trackName = trackNamePrmt;
     this -> trackArtist = trackArtistPrmt;
+    this -> albumArtist = albumArtistPrmt;
     this -> trackPlaytime = trackPlaytimePrmt;
+    this -> trackNumber = trackNumberPrmt;
+    this -> trackCount = trackCountPrmt;
+    this -> discNumber = discNumberPrmt;
+    this -> discCount = discCountPrmt;
+    this -> trackPlayCount = trackPlayCountPrmt;
+    this -> trackEvaluation = trackEvaluationPrmt;
+    this -> isFavourite = isFavouritePrmt;
+    this -> recordingInfo = recordingInfoPrmt;
+    this -> comment = commentPrmt;
 }
 
 // Destructor
